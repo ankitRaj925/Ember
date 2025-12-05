@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember & Ash | Modern Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"DM Sans"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#fef5ee',
+                100: '#fcefe5',
+                200: '#f8dccb',
+                300: '#f2c0a4',
+                400: '#ea996c',
+                500: '#e85d04', // Burnt Orange / Ember
+                600: '#d04900',
+                700: '#ae3800',
+                800: '#1e1e1e', // Card BG
+                900: '#121212', // Main BG
+                950: '#0a0a0a',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'fade-in-up': 'fadeInUp 0.7s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-900 text-brand-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
